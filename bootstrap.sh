@@ -41,7 +41,7 @@ sudo cp out/native/lib.target/libv8.so /usr/lib
 cd ../
 git clone https://code.google.com/p/plv8js/
 cd plv8js
-make V8_SRCDIR=../v8/
+make V8_SRCDIR=../v8/ PG_CONFIG=/usr/local/pgsql/bin/pg_config
 sudo make install PG_CONFIG=/usr/local/pgsql/bin/pg_config
 
 # instantiate plv8 extension
