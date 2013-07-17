@@ -6,9 +6,9 @@ if [ ! -f ~/.runonce ]; then
 
   # install postgres
   sudo apt-get install -y libreadline-dev zlib1g-dev flex bison libxml2-dev libxslt-dev libssl-dev
-  wget http://ftp.postgresql.org/pub/source/v9.3beta1/postgresql-9.3beta1.tar.gz
-  tar -xzf postgresql-9.3beta1.tar.gz
-  cd postgresql-9.3beta1
+  wget http://ftp.postgresql.org/pub/source/v9.3beta2/postgresql-9.3beta2.tar.gz
+  tar -xzf postgresql-9.3beta2.tar.gz
+  cd postgresql-9.3beta2
   ./configure
   make
   sudo make install
