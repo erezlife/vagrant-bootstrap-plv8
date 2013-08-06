@@ -53,6 +53,14 @@ if [ ! -f ~/.runonce ]; then
   # instantiate plv8 extension
   sudo -u postgres /usr/local/pgsql/bin/psql -d template1 -c "CREATE EXTENSION plv8;"
 
+  # install pgcrypto
+  cd ../postgres-9.3beta2/contrib/pgcrypto
+  make
+  sudo make install
+
+  # instantiate pgcryto extension
+  sudo -u postgres /usr/local/pgsql/bin/psql -d template1 -c "CREATE EXTENSION pgcrypto;"
+
   # install postsql extensions
   cd ../
   git clone https://github.com/tobyhede/postsql.git
